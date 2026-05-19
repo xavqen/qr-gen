@@ -8,6 +8,16 @@ import Footer from "@/components/footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
+  icons: {
+    icon: [
+      { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/favicon.ico", sizes: "32x32" }
+    ],
+    apple: [
+      { url: "/apple-icon.png", sizes: "180x180", type: "image/png" }
+    ],
+    shortcut: "/favicon.ico",
+  },
   title: {
     default: "QR Code Generator - Free Custom QR Codes",
     template: "%s | QR Code Generator",
