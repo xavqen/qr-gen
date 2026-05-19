@@ -174,7 +174,7 @@ export function generateMetadata({ params }: BlogPostPageProps): Metadata {
 
   return {
     title: post.title,
-    description: post.excerpt || post.title,
+    description: (post as any).excerpt || post.title,
     alternates: {
       canonical: `/blog/${params.slug}/`,
     },
