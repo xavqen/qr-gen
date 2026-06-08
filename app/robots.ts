@@ -1,16 +1,10 @@
 import { MetadataRoute } from "next";
 
-export default function robots(): MetadataRoute.Robots {
-  const baseUrl = process.env.NEXT_PUBLIC_APP_URL || "http://localhost:3000";
+const baseUrl = "https://www.qr-generator.website";
 
+export default function robots(): MetadataRoute.Robots {
   return {
-    rules: [
-      {
-        userAgent: "*",
-        allow: "/",
-        disallow: ["/api/"],
-      },
-    ],
+    rules: [{ userAgent: "*", allow: "/", disallow: ["/api/"] }],
     sitemap: `${baseUrl}/sitemap.xml`,
   };
 }
